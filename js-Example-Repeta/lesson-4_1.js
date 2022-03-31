@@ -341,32 +341,61 @@
 // console.log(r3);
 
 // =========================================================
-const pizzaPalace = {
-    pizzas: ['Ultracheese', 'Smoked', 'Four meats'],
-    order(pizzaName, onSuccess, onError) {
-        if (this.pizzas.includes(pizzaName)) {
-            return onSuccess(pizzaName);
-        }
-        return onError(`There is no pizza with a name ${pizzaName} in the assortment.`);
-    },
+// const pizzaPalace = {
+//     pizzas: ['Ultracheese', 'Smoked', 'Four meats'],
+//     order(pizzaName, onSuccess, onError) {
+//         if (this.pizzas.includes(pizzaName)) {
+//             console.log(onSuccess(pizzaName));
+//             return onSuccess(pizzaName);
+//         }
+//         console.log(onError(`There is no pizza with a name ${pizzaName} in the assortment.`));
+//         return onError(`There is no pizza with a name ${pizzaName} in the assortment.`);
+//     },
+// };
+
+
+
+// // Change code above this line
+
+// // Callback for onSuccess
+// function makePizza(pizzaName) {
+//     return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+// }
+
+// // Callback for onError
+// function onOrderError(error) {
+//     return `Error! ${error}`;
+// }
+
+// // Method calls with callbacks
+// pizzaPalace.order('Smoked', makePizza, onOrderError);
+// pizzaPalace.order('Four meats', makePizza, onOrderError);
+// pizzaPalace.order('Big Mike', makePizza, onOrderError);
+// pizzaPalace.order('Vienna', makePizza, onOrderError);
+// =========================================================
+// const numbers = [5, 10, 15, 20, 25];
+
+// // Классический for
+// for (let i = 0; i < numbers.length; i += 1) {
+//   console.log(`Индекс ${i}, значение ${numbers[i]}`);
+// }
+
+// // Перебирающий forEach
+// numbers.forEach(function (number, index) {
+//   console.log(`Индекс ${index}, значение ${number}`);
+// });
+// =========================================================
+function changeEven(numbers, value) {
+  // Change code below this line
+    
+    const newArray = [];
+    
+    numbers.forEach(element => (element % 2 === 0 ? newArray.push(element + value) : newArray.push(element)));
+console.log(newArray);
+    return newArray;
+    
+  // Change code above this line
 };
 
-
-
-// Change code above this line
-
-// Callback for onSuccess
-function makePizza(pizzaName) {
-    return `Your order is accepted. Cooking pizza ${pizzaName}.`;
-}
-
-// Callback for onError
-function onOrderError(error) {
-    return `Error! ${error}`;
-}
-
-// Method calls with callbacks
-pizzaPalace.order('Smoked', makePizza, onOrderError);
-pizzaPalace.order('Four meats', makePizza, onOrderError);
-pizzaPalace.order('Big Mike', makePizza, onOrderError);
-pizzaPalace.order('Vienna', makePizza, onOrderError);
+changeEven([1,10,2], 10);
+changeEven([2, 8, 3, 7, 4, 6], 10);
