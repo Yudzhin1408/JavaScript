@@ -282,15 +282,15 @@
 /*
  * Собираем все теги из твитов
  */
-const tweets = [
-  { id: '000', likes: 5, tags: ['js', 'nodejs'] },
-  { id: '001', likes: 2, tags: ['html', 'css'] },
-  { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
-  { id: '003', likes: 8, tags: ['css', 'react'] },
-  { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
-];
+// const tweets = [
+//   { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+//   { id: '001', likes: 2, tags: ['html', 'css'] },
+//   { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+//   { id: '003', likes: 8, tags: ['css', 'react'] },
+//   { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+// ];
 
-const allTags = tweets.reduce((acc, tweet) => [...acc, ...tweet.tags], [])
+// const allTags = tweets.reduce((acc, tweet) => [...acc, ...tweet.tags], [])
 
 // console.log(allTags);
 
@@ -314,13 +314,102 @@ const allTags = tweets.reduce((acc, tweet) => [...acc, ...tweet.tags], [])
 
 // *********var-2;
 
-const tagsStats = allTags.reduce((acc, tag) => {
-    return {
-        ...acc,
-        [tag]: acc[tag] ? acc[tag] + 1 : 1,
-    };
-}, {});
-console.log(tagsStats);
+// const tagsStats = allTags.reduce((acc, tag) => {
+//     return {
+//         ...acc,
+//         [tag]: acc[tag] ? acc[tag] + 1 : 1,
+//     };
+// }, {});
+// console.log(tagsStats);
 
 // если свойство с ключом tag есть. увеличить его значение на 1
 // если свойствоства нет с таким ключом что в tag, сделать и записать 1
+// --------------------------------------------------
+// const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73]
+// const evenNumbers = numbers.filter(number=>number % 2===0);
+// const oddNumbers = numbers.filter(number => number % 2 !== 0);
+// console.log(evenNumbers);
+// console.log(oddNumbers);
+// =================================================================
+// const users = 
+//   [
+//     {
+//       name: "Moore Hensley",
+//       email: "moorehensley@indexia.com",
+//       eyeColor: "blue",
+//       friends: ["Sharron Pace"],
+//       isActive: false,
+//       balance: 2811,
+//       gender: "male"
+//     },
+//     {
+//       name: "Sharlene Bush",
+//       email: "sharlenebush@tubesys.com",
+//       eyeColor: "blue",
+//       friends: ["Briana Decker", "Sharron Pace"],
+//       isActive: true,
+//       balance: 3821,
+//       gender: "female"
+//     },
+//     {
+//       name: "Ross Vazquez",
+//       email: "rossvazquez@xinware.com",
+//       eyeColor: "green",
+//       friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//       isActive: false,
+//       balance: 3793,
+//       gender: "male"
+//     },
+//     {
+//       name: "Elma Head",
+//       email: "elmahead@omatom.com",
+//       eyeColor: "green",
+//       friends: ["Goldie Gentry", "Aisha Tran"],
+//       isActive: true,
+//       balance: 2278,
+//       gender: "female"
+//     },
+//     {
+//       name: "Carey Barr",
+//       email: "careybarr@nurali.com",
+//       eyeColor: "blue",
+//       friends: ["Jordan Sampson", "Eddie Strong", "Adrian Cross"],
+//       isActive: true,
+//       balance: 3951,
+//       gender: "male"
+//     },
+//     {
+//       name: "Blackburn Dotson",
+//       email: "blackburndotson@furnigeer.com",
+//       eyeColor: "brown",
+//       friends: ["Jacklyn Lucas", "Linda Chapman", "Adrian Cross", "Solomon Fokes"],
+//       isActive: false,
+//       balance: 1498,
+//       gender: "male"
+//     },
+//     {
+//       name: "Sheree Anthony",
+//       email: "shereeanthony@kog.com",
+//       eyeColor: "brown",
+//       friends: ["Goldie Gentry", "Briana Decker"],
+//       isActive: true,
+//       balance: 2764,
+//       gender: "female"
+//     }
+//   ];
+// length
+
+
+// const getTotalBalanceByGender = (users, gender) =>
+//   users.filter(a=>a.gender===gender)
+// .reduce((index,user)=>user.balance+index,0)
+
+// ;
+
+      
+
+// console.log(getTotalBalanceByGender(users, 'male'));
+// console.log(getTotalBalanceByGender(users, 'female'));
+// =================================================================
+
+
